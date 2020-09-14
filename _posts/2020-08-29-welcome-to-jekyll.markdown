@@ -5,10 +5,10 @@ date:   2020-08-29 22:27:28 +0800
 categories: jekyll update
 ---
 
-Howdy! Yea!
+Howdy! Yea! Version3!
 
-![Concert](/assets/image/concert.jpg)
-![Concert](../assets/image/test.gif)
+![Concert](./assets/image/concert.jpg)
+![Concert]({{site.baseurl}}/assets/image/test.gif)
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
