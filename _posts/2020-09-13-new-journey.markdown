@@ -17,4 +17,4 @@ Through it is not my priority on learning, I guess learn something new is not ba
 
 So... let's see if i am updating this blog or not! :D
 
-![A test gif here.]({{site.baseurl}}/assets/image/test.gif)
+![A test gif here.]({{site.asseturl}}/assets/image/test.gif)

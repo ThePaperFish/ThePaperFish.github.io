@@ -5,6 +5,7 @@ description: >
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://thepaperfish.github.io" # the base hostname & protocol for your site
+asseturl: "https://raw.githubusercontent.com/ThePaperFish/ThePaperFish.github.io/master/" # the base hostname & protocol for your site
 
 author:
   fullname: Caleb Chong
