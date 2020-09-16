@@ -1,4 +1,4 @@
 # MySite
 ThePaperFish Site
 
-Feel free to visit [here](ThePaperFish.github.io)
+Feel free to visit [here]({{site}}).
