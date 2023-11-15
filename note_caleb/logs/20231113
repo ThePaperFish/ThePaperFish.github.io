@@ -1,0 +1,113 @@
+`compiling Platform.c
+compiling Pointer.c
+compiling Struct.c
+compiling StructByReference.c
+compiling StructByValue.c
+compiling StructLayout.c
+compiling Thread.c
+compiling Type.c
+compiling Types.c
+Types.c: In function 'rbffi_NativeValue_ToRuby':
+Types.c:83:47: warning: implicit declaration of function 'rb_tainted_str_new2';
+did you mean 'rb_utf8_str_new'? [-Wimplicit-function-declaration]
+83 |             return (*(void **) ptr != NULL) ? rb_tainted_str_new2(*(char
+**) ptr) : Qnil;
+      |                                               ^~~~~~~~~~~~~~~~~~~
+      |                                               rb_utf8_str_new
+compiling Variadic.c
+Variadic.c: In function 'variadic_invoke':
+Variadic.c:274:20: warning: passing argument 1 of 'rb_rescue2' from incompatible
+pointer type [-Wincompatible-pointer-types]
+274 |         rb_rescue2(rbffi_do_blocking_call, (VALUE) bc,
+rbffi_save_frame_exception, (VALUE) &frame, rb_eException, (VALUE) 0);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+|                    VALUE (*)(void *) {aka long long unsigned int
+(*)(void *)}
+In file included from C:/Ruby32-x64/include/ruby-3.2.0/ruby/ruby.h:41,
+                 from C:/Ruby32-x64/include/ruby-3.2.0/ruby.h:38,
+                 from Variadic.c:43:
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/iterator.h:388:26: note: expected
+'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'}
+but argument is of type 'VALUE (*)(void *)' {aka 'long long unsigned int
+(*)(void *)'}
+388 | VALUE rb_rescue2(VALUE (*b_proc)(VALUE), VALUE data1, VALUE
+(*r_proc)(VALUE, VALUE), VALUE data2, ...);
+      |                  ~~~~~~~~^~~~~~~~~~~~~~
+Variadic.c:274:56: warning: passing argument 3 of 'rb_rescue2' from incompatible
+pointer type [-Wincompatible-pointer-types]
+274 |         rb_rescue2(rbffi_do_blocking_call, (VALUE) bc,
+rbffi_save_frame_exception, (VALUE) &frame, rb_eException, (VALUE) 0);
+|
+^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                        |
+|                                                        VALUE (*)(void *,
+VALUE) {aka long long unsigned int (*)(void *, long long unsigned int)}
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/iterator.h:388:63: note: expected
+'VALUE (*)(VALUE,  VALUE)' {aka 'long long unsigned int (*)(long long unsigned
+int,  long long unsigned int)'} but argument is of type 'VALUE (*)(void *,
+VALUE)' {aka 'long long unsigned int (*)(void *, long long unsigned int)'}
+388 | VALUE rb_rescue2(VALUE (*b_proc)(VALUE), VALUE data1, VALUE
+(*r_proc)(VALUE, VALUE), VALUE data2, ...);
+|
+
+```^~~~~~~~~~~~~~~~~~~~~
+compiling ffi.c
+linking shared-object ffi_c.so
+C:/Ruby32-x64/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe:
+AbstractMemory.o:AbstractMemory:(.text+0x952): undefined reference to
+`rb_safe_level'
+C:/Ruby32-x64/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe:
+AbstractMemory.o:AbstractMemory:(.text+0xc25): undefined reference to
+`rb_tainted_str_new2'
+C:/Ruby32-x64/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe:
+AbstractMemory.o:AbstractMemory:(.text+0xce1): undefined reference to
+`rb_tainted_str_new2'
+C:/Ruby32-x64/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe:
+AbstractMemory.o:AbstractMemory:(.text+0x1e72): undefined reference to
+`rb_tainted_str_new'
+C:/Ruby32-x64/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe:
+AbstractMemory.o:AbstractMemory:(.text+0x1f1a): undefined reference to
+`rb_tainted_str_new2'
+C:/Ruby32-x64/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe:
+AbstractMemory.o:AbstractMemory:(.text+0x4ae1): undefined reference to
+`rb_tainted_str_new'
+C:/Ruby32-x64/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe:
+AbstractMemory.o:AbstractMemory:(.text+0x5221): undefined reference to
+`rb_tainted_str_new'
+C:/Ruby32-x64/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe:
+Call.o:Call.c:(.text+0x4f1): undefined reference to `rb_safe_level'
+C:/Ruby32-x64/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe:
+DynamicLibrary.o:DynamicLibrary:(.text+0x2e5): undefined reference to
+`rb_tainted_str_new2'
+C:/Ruby32-x64/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe:
+Function.o:Function.c:(.text+0x1421): undefined reference to
+`rb_tainted_str_new2'
+C:/Ruby32-x64/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe:
+Types.o:Types.c:(.text+0xea): undefined reference to `rb_tainted_str_new2'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/ffi-1.9.15/ext/ffi_c/libffi-x64-mingw-ucrt/.libs/libffi_convenience.a(win64.o):fake:(.text+0x69):
+relocation truncated to fit: R_X86_64_32S against symbol
+`ffi_closure_win64_inner' defined in .text section in
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/ffi-1.9.15/ext/ffi_c/libffi-x64-mingw-ucrt/.libs/libffi_convenience.a(ffi.o)
+collect2.exe: error: ld returned 1 exit status
+make: *** [Makefile:265: ffi_c.so] Error 1
+
+make failed, exit code 2
+
+Gem files will remain installed in
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/ffi-1.9.15 for inspection.
+Results logged to
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/extensions/x64-mingw-ucrt/3.2.0/ffi-1.9.15/gem_make.out
+
+An error occurred while installing ffi (1.9.15), and Bundler cannot continue.
+Make sure that `gem install ffi -v '1.9.15' --source 'https://rubygems.org/'`
+succeeds before bundling.
+
+In Gemfile:
+  minima was resolved to 2.5.1, which depends on
+    jekyll-feed was resolved to 0.17.0, which depends on
+      jekyll was resolved to 4.1.1, which depends on
+        jekyll-sass-converter was resolved to 2.2.0, which depends on
+          sassc was resolved to 2.4.0, which depends on
+            ffi
+```
